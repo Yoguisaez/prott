@@ -45,6 +45,7 @@ export interface Section {
   price: number;
   rows?: number;
   seatsPerRow?: number;
+  ticketTypeId?: string;
   visualX?: number; // 0-100
   visualY?: number; // 0-100
   width?: number; // 0-100

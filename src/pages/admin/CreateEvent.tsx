@@ -241,7 +241,6 @@ const CreateEvent = () => {
       // Aquí se usaría updateEvent si existe ID, o createEvent si no
       // Como updateEvent no está explícitamente en el mock api, simulamos que create hace un "upsert" o simplemente lo guardamos
       await createEvent({
-        id: id, // Pass ID if editing
         ...formData,
         categorias: formData.categorias.split(',').map(c => c.trim()),
         fecha: new Date(formData.fecha).toISOString(),
