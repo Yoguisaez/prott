@@ -4,7 +4,7 @@ import { X, Mail, User as UserIcon } from 'lucide-react';
 
 interface AuthModalProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: (success?: boolean) => void;
 }
 
 export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
@@ -25,7 +25,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
       } else {
         await register(email, name);
       }
-      onClose();
+      onClose(true);
     } catch (err) {
       setError('Error en autenticación. Intenta con usuario@demo.com');
     }
@@ -35,7 +35,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
       <div className="bg-white rounded-2xl w-full max-w-md p-8 relative shadow-2xl">
         <button 
-          onClick={onClose}
+          onClick={() => onClose(false)}
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
         >
           <X size={24} />

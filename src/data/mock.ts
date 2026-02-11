@@ -13,6 +13,7 @@ export const MOCK_USERS: User[] = [
     email: 'admin@demo.com',
     nombre: 'Admin User',
     rol: 'admin',
+    avatar: 'https://ui-avatars.com/api/?name=Admin+User&background=0D8ABC&color=fff',
   }
 ];
 
@@ -139,7 +140,36 @@ export let MOCK_EVENTS: Event[] = [
   {
     id: '3',
     titulo: 'Coldplay - Music of the Spheres',
-    descripcion: 'Una experiencia visual y auditiva única.',
+    descripcion: `<div class="space-y-6">
+  <div class="bg-gradient-to-r from-purple-900 to-indigo-900 text-white p-6 rounded-xl shadow-lg">
+    <h3 class="text-xl font-bold mb-2">🪐 Music of the Spheres World Tour</h3>
+    <p class="text-purple-100">
+      Una experiencia visual y auditiva única. Sumérgete en un universo de colores, luces y sonidos con la banda más grande del mundo.
+      Un show sustentable que genera su propia energía.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+      <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">✨ Highlights</h4>
+      <ul class="space-y-2 text-slate-600">
+        <li>💡 Pulseras LED interactivas (Xylobands)</li>
+        <li>🎆 Espectáculo de fuegos artificiales</li>
+        <li>💃 Piso cinético para generar energía</li>
+      </ul>
+    </div>
+    
+    <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+      <h4 class="font-bold text-slate-900 mb-3 flex items-center gap-2">🎹 Clásicos</h4>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Yellow</span>
+        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Fix You</span>
+        <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">My Universe</span>
+        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Viva la Vida</span>
+      </div>
+    </div>
+  </div>
+</div>`,
     fecha: new Date(Date.now() + 86400000 * 60).toISOString(),
     lugar: 'Estadio River Plate',
     ciudad: 'Buenos Aires',
@@ -159,7 +189,29 @@ export let MOCK_EVENTS: Event[] = [
   {
     id: '4',
     titulo: 'El Rey León - El Musical',
-    descripcion: 'El aclamado musical de Broadway llega a la ciudad.',
+    descripcion: `<div class="space-y-6">
+  <div class="bg-amber-50 p-6 rounded-xl border border-amber-100">
+    <h3 class="text-xl font-bold text-amber-900 mb-2">🦁 El Ciclo Sin Fin</h3>
+    <p class="text-amber-800">
+      El aclamado musical de Broadway llega a la ciudad. Una puesta en escena impresionante con máscaras, marionetas gigantes y la inolvidable música de Elton John y Tim Rice.
+    </p>
+  </div>
+
+  <div class="flex gap-4 overflow-x-auto pb-2">
+     <div class="min-w-[150px] bg-white p-4 rounded-lg shadow-sm border border-slate-100 text-center">
+       <span class="text-3xl block mb-2">🎭</span>
+       <span class="font-bold text-slate-700 text-sm">Vestuario Increíble</span>
+     </div>
+     <div class="min-w-[150px] bg-white p-4 rounded-lg shadow-sm border border-slate-100 text-center">
+       <span class="text-3xl block mb-2">🦒</span>
+       <span class="font-bold text-slate-700 text-sm">Marionetas Reales</span>
+     </div>
+     <div class="min-w-[150px] bg-white p-4 rounded-lg shadow-sm border border-slate-100 text-center">
+       <span class="text-3xl block mb-2">🎼</span>
+       <span class="font-bold text-slate-700 text-sm">Orquesta en Vivo</span>
+     </div>
+  </div>
+</div>`,
     fecha: new Date(Date.now() + 86400000 * 45).toISOString(),
     lugar: 'Teatro Municipal',
     ciudad: 'Santiago',
@@ -182,13 +234,33 @@ export let MOCK_EVENTS: Event[] = [
     id: '5',
     titulo: 'Lollapalooza 2025',
     descripcion: `<div class="space-y-6">
-    <div class="bg-pink-50 p-6 rounded-xl border border-pink-100">
-      <h3 class="text-xl font-bold text-pink-900 mb-2">🎪 El Festival Más Grande</h3>
-      <p class="text-pink-800">
-        Tres días de música, arte y cultura. Más de 100 artistas en 5 escenarios. ¡No te pierdas la experiencia Lolla!
-      </p>
+  <div class="bg-pink-50 p-6 rounded-xl border border-pink-100">
+    <h3 class="text-xl font-bold text-pink-900 mb-2">🎪 El Festival Más Grande</h3>
+    <p class="text-pink-800">
+      Tres días de música, arte y cultura. Más de 100 artistas en 5 escenarios. ¡No te pierdas la experiencia Lolla!
+      Desde rock hasta electrónica, hay algo para todos.
+    </p>
+  </div>
+  
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="bg-slate-50 p-3 rounded text-center">
+      <div class="font-bold text-slate-800">100+</div>
+      <div class="text-xs text-slate-500">Artistas</div>
     </div>
-    </div>`,
+    <div class="bg-slate-50 p-3 rounded text-center">
+      <div class="font-bold text-slate-800">5</div>
+      <div class="text-xs text-slate-500">Escenarios</div>
+    </div>
+    <div class="bg-slate-50 p-3 rounded text-center">
+      <div class="font-bold text-slate-800">Kidz</div>
+      <div class="text-xs text-slate-500">Zona Familiar</div>
+    </div>
+    <div class="bg-slate-50 p-3 rounded text-center">
+      <div class="font-bold text-slate-800">Food</div>
+      <div class="text-xs text-slate-500">Garden</div>
+    </div>
+  </div>
+</div>`,
     fecha: new Date(Date.now() + 86400000 * 120).toISOString(),
     lugar: 'Parque Bicentenario',
     ciudad: 'Santiago',
@@ -210,7 +282,20 @@ export let MOCK_EVENTS: Event[] = [
   {
     id: '6',
     titulo: 'Stand Up Comedy: La Risa',
-    descripcion: 'Una noche de risas con los mejores comediantes locales.',
+    descripcion: `<div class="space-y-4">
+  <div class="p-4 bg-slate-50 rounded-lg border-l-4 border-blue-500">
+    <p class="text-slate-700 italic">"La risa es el mejor remedio"</p>
+  </div>
+  <p class="text-slate-600">
+    Una noche íntima con los mejores comediantes del circuito nacional. 
+    Disfruta de una carta de tragos exclusiva y tablas para compartir mientras ríes sin parar.
+  </p>
+  <ul class="list-disc list-inside text-slate-600 ml-2">
+    <li>Show de 90 minutos</li>
+    <li>3 Comediantes invitados</li>
+    <li>Meet & Greet post show (VIP)</li>
+  </ul>
+</div>`,
     fecha: new Date(Date.now() + 86400000 * 5).toISOString(),
     lugar: 'Club de la Comedia',
     ciudad: 'Viña del Mar',
@@ -232,7 +317,26 @@ export let MOCK_EVENTS: Event[] = [
   {
     id: '7',
     titulo: 'NBA Mexico City Game 2025',
-    descripcion: 'El mejor baloncesto del mundo regresa a CDMX.',
+    descripcion: `<div class="space-y-6">
+  <div class="bg-orange-50 p-6 rounded-xl border border-orange-100">
+    <h3 class="text-xl font-bold text-orange-900 mb-2">🏀 NBA Global Games</h3>
+    <p class="text-orange-800">
+      El mejor baloncesto del mundo regresa a CDMX. Un enfrentamiento oficial de temporada regular con todas las estrellas de la liga.
+    </p>
+  </div>
+  
+  <div class="grid grid-cols-2 gap-4">
+    <div class="border p-4 rounded-lg flex flex-col items-center">
+       <span class="text-2xl font-bold text-slate-800">Lakers</span>
+       <span class="text-sm text-slate-500">vs</span>
+       <span class="text-2xl font-bold text-slate-800">Heat</span>
+    </div>
+    <div class="border p-4 rounded-lg flex flex-col items-center justify-center bg-slate-50">
+       <span class="font-bold text-slate-700">Halftime Show</span>
+       <span class="text-xs text-slate-500">Sorpresa Invitado Especial</span>
+    </div>
+  </div>
+</div>`,
     fecha: new Date(Date.now() + 86400000 * 90).toISOString(),
     lugar: 'Arena CDMX',
     ciudad: 'Ciudad de México',
@@ -254,7 +358,21 @@ export let MOCK_EVENTS: Event[] = [
   {
     id: '8',
     titulo: 'Cirque du Soleil: OVO',
-    descripcion: 'Un ecosistema colorido repleto de vida.',
+    descripcion: `<div class="space-y-6">
+  <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+    <h3 class="text-xl font-bold text-blue-900 mb-2">🐞 Un Mundo de Biodiversidad</h3>
+    <p class="text-blue-800">
+      OVO es un ecosistema colorido repleto de vida, donde los insectos trabajan, comen, se arrastran, revolotean, juegan, luchan y buscan el amor en un derroche continuo de energía y movimiento.
+    </p>
+  </div>
+  
+  <div class="flex gap-3 flex-wrap">
+    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold text-slate-600">Acrobacia</span>
+    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold text-slate-600">Música en Vivo</span>
+    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold text-slate-600">Familiar</span>
+    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold text-slate-600">Circo Contemporáneo</span>
+  </div>
+</div>`,
     fecha: new Date(Date.now() + 86400000 * 25).toISOString(),
     lugar: 'Movistar Arena',
     ciudad: 'Santiago',

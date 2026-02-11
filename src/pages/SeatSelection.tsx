@@ -134,9 +134,9 @@ export default function SeatSelection() {
     processReservation();
   };
 
-  const handleAuthModalClose = () => {
+  const handleAuthModalClose = (success = false) => {
     setIsAuthModalOpen(false);
-    if (!user) {
+    if (!success && !user) {
       setPendingReservation(false);
     }
   };
